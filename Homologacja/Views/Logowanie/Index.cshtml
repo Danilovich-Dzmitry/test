@@ -1,0 +1,29 @@
+﻿@model Login
+
+@{
+    ViewData["Title"] = "Logowanie";
+}
+
+<div class="row justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-md-6">
+        <div class="card mt-5 mx-auto" style="width: 935px; height: 601px">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <h3 class="card-title text-center mb-5">Zaloguj się do systemu e-homologacji firmy AC SA</h3>
+                <form method="post" asp-action="" style="width: 70%">
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label"></label><br />
+                        <input type="text" class="form-control" asp-for="Email" required />
+                    </div>
+                    <div>
+                        <label asp-for="Password" class="form-label"></label><br />
+                        <input type="password" class="form-control" asp-for="Password" required />
+                    </div>
+                </form>
+                <button type="submit" class="btn btn-primary mt-3" style="width: 30%;">Zaloguj się</button>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Logowanie" asp-action="Remember_Password">Nie pamiętam hasła</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
